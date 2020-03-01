@@ -1,8 +1,7 @@
-package useragent
-
-// package useragent provides an extension to the go default User-Agent string
+// Package useragent provides an extension to the go default User-Agent string
 // including OS/Architecture by default and allowing you to easily add more
 // detail about your specific client.
+package useragent
 
 import (
 	"bufio"
@@ -84,7 +83,11 @@ func defaultHTTPClientUserAgent() string {
 	// I could use an empty string for the first 2 arguments, but that behavior could change
 	req, _ := http.NewRequest("GET", "/", nil)
 	out := bytes.Buffer{}
-	req.Write(&out)
+	err := req.Write(&out)
+	if err != nil {
+		// something very funky happened if we got an error
+		panic(err)
+	}
 	// then read the request back
 	req, _ = http.ReadRequest(bufio.NewReader(&out))
 	// and finally return the user agent.
