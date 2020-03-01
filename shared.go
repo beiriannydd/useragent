@@ -1,5 +1,9 @@
 package useragent
 
+// package useragent provides an extension to the go default User-Agent string
+// including OS/Architecture by default and allowing you to easily add more
+// detail about your specific client.
+
 import (
 	"bufio"
 	"bytes"

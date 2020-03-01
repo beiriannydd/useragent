@@ -1,5 +1,6 @@
 useragent
 =========
+[![GoDoc](https://godoc.org/github.com/beiriannydd/useragent?status.svg)](https://godoc.org/github.com/beiriannydd/useragent)
 
 A better user agent string for web requests.
 
