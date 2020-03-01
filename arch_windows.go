@@ -2,7 +2,6 @@ package useragent
 
 import (
 	"runtime"
-	"strings"
 )
 
 func currentArchitecture() string {
@@ -18,7 +17,8 @@ func currentArchitecture() string {
 	arch := runtime.GOARCH
 	// ver outputs the OS Version
 	out, _ := run("cmd", "ver")
-	if len(out) == 1 {
+	// There's a second line which is a copyright message.
+	if len(out) >= 1 {
 		// moved parsing the version out to shared code to simplify testing
 		os = parseWindowsVersion(out[0])
 	}
