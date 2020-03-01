@@ -1,6 +1,10 @@
 useragent
 =========
 [![GoDoc](https://godoc.org/github.com/beiriannydd/useragent?status.svg)](https://godoc.org/github.com/beiriannydd/useragent)
+[![GolangCI](https://golangci.com/badges/github.com/beiriannydd/useragent.svg)](https://golangci.com)
+[![License](https://img.shields.io/github/license/beiriannydd/useragent)](/LICENSE)
+[![Release](https://img.shields.io/github/release/beiriannydd/useragent.svg)](https://github.com/beiriannydd/useragent/releases/latest)
+
 
 A better user agent string for web requests.
 
